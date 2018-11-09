@@ -1,0 +1,147 @@
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Owl Carousel
+@import "~owl.carousel/dist/assets/owl.carousel.css";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+[class*="fa-"] {
+    font-family: "fontawesome";
+    font-style: normal;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+#dashboard-sidebar a {
+    color: #f0f0f0;
+}
+
+#dashboard-sidebar a.active {
+    background-color: var(--primary);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.font-size-44 {
+    font-size: 44px;
+}
+
+.pricing-card {
+    border: 0;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    padding: 2.25rem 0;
+    position: relative;
+    will-change: transform;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 5px;
+        background-color: var(--primary);
+        transition: 0.5s;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+        box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+
+        &:after {
+            width: 100%;
+        }
+    }
+
+    & .card-header {
+        background-color: white;
+        padding-left: 2rem;
+        border-bottom: 0px;
+    }
+
+    & .card-title {
+        margin-bottom: 1rem;
+    }
+
+    & .card-block {
+        padding-top: 0;
+    }
+
+    & .list-group-item {
+        border: 0px;
+        padding: 0.25rem;
+        color: $main-font-color;
+        font-weight: 400;
+    }
+
+    // Price
+    .display-2 {
+        font-size: 3rem;
+        letter-spacing: -.1rem;
+
+        & .currency {
+            font-size: 0.95rem;
+            position: relative;
+            font-weight: $main-font-weight + 100;
+            top: -35px;
+            letter-spacing: 0px;
+        }
+
+        & .period {
+            font-size: 1rem;
+            color: lighten($main-font-color, 20%);
+            letter-spacing: 0px;
+        }
+    }
+
+    // Buttons
+    .btn {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: $main-font-weight + 200;
+        color: lighten($main-font-color, 15%);
+        border-radius: 0;
+        padding: 0.75rem 1.25rem;
+        letter-spacing: 1px;
+    }
+
+    .btn-gradient {
+        background-color: #f2f2f2;
+        transition: background 0.3s ease-in-out;
+
+        &:hover {
+            color: white;
+            background-color: var(--primary);
+        }
+    }
+}
+
+#select-template-modal {
+    .owl-prev {
+        background-color: #333 !important;
+        color: #fff !important;
+        padding: 20px !important;
+        position: absolute;
+        left: 0;
+        top: 42%;
+    }
+
+    .owl-next {
+        background-color: #333 !important;
+        color: #fff !important;
+        padding: 20px !important;
+        position: absolute;
+        right: 0;
+        top: 42%;
+    }
+}
